@@ -6,6 +6,20 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit0fac06ab46f966d6ae937dfc0a7ed578
 {
+    public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'PP\\' => 3,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'PP\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/includes',
+        ),
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'WP_Async_Request' => __DIR__ . '/..' . '/a5hleyrich/wp-background-processing/classes/wp-async-request.php',
@@ -15,6 +29,8 @@ class ComposerStaticInit0fac06ab46f966d6ae937dfc0a7ed578
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit0fac06ab46f966d6ae937dfc0a7ed578::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit0fac06ab46f966d6ae937dfc0a7ed578::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit0fac06ab46f966d6ae937dfc0a7ed578::$classMap;
 
         }, null, ClassLoader::class);
