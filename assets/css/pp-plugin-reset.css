@@ -1,0 +1,10 @@
+.upload-plugin form{
+  width: 100% !important;
+  display: block !important;
+  position: relative;
+}
+.upload-plugin form #pluginzip{
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
